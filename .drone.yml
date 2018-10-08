@@ -1,0 +1,16 @@
+pipeline:
+  run-tests:
+    image: node:10.11.0
+    commands:
+      - chmod +x ./bin/run.sh
+      - ./bin/run.sh
+    when:
+      status: [ failure, success ]
+      event: [pull_request]
+
+  publish-eslint-config:
+    image: plugins/npm
+    secrets: [ npm_username, npm_email, npm_password ]
+    when:
+      event: [tag]
+      branches: [ master ]

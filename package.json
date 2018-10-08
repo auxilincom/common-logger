@@ -1,0 +1,23 @@
+{
+  "name": "@auxilin/common-logger",
+  "version": "0.1.0",
+  "description": "Simple, preconfigured logger",
+  "author": "Auxilin",
+  "private": false,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint ./"
+  },
+  "dependencies": {
+    "winston": "3.1.0"
+  },
+  "devDependencies": {
+    "@auxilin/eslint-config": "0.1.1",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
+    "npm-run-all": "4.1.3"
+  }
+}
