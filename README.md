@@ -11,18 +11,18 @@
 
 Common logger is preconfigured console based logger. Currently based on [winston](https://github.com/winstonjs/winston).
 
-### Installation
+## Installation
 
-```
-npm i @paralect/common-logger
+```bash
+npm i @auxilin/common-logger
 ```
 
-### Usage
+## Quick example
 
 Create `logger.js` file in the root of your project:
 
-```
-const createConsoleLogger = require('@paralect/common-logger').createConsoleLogger;
+```javascript
+const createConsoleLogger = require('@auxilin/common-logger').createConsoleLogger;
 
 module.exports = createConsoleLogger({ isDev: true });
 ```
@@ -32,13 +32,38 @@ By default isDev is set to `false` in logger. If set to true, two things will ha
 1. All logs output will be in plain text (vs `json` for production like environments)
 2. For development environment logger will also output all `logger.debug()` messages, while none dev info and above.
 
-### Expose logger as global object
+## Expose logger as global object
 
 Since logger is such a common thing, it make sense to expose it as global variable, so it simpler to use it across the project.
 
-```
+```javascript
 global.logger = require('./logger');
 
 // In a place, where you need logger:
 const logger = global.logger;
 ```
+
+## Change Log
+
+This project adheres to [Semantic Versioning](http://semver.org/).
+Every release is documented on the Github [Releases](https://github.com/auxilincom/common-logger/releases) page.
+
+## License
+
+Node-mongo is released under the [MIT License](https://github.com/auxilincom/common-logger/blob/master/LICENSE).
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/auxilincom/common-logger/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars2.githubusercontent.com/u/6461311?v=4" width="100px;"/><br /><sub><b>Evgeny Zhivitsa</b></sub>](https://github.com/ezhivitsa)<br />[💻](https://github.com/auxilincom/eslint-config/commits?author=ezhivitsa "Code") [📖](https://github.com/auxilincom/eslint-config/commits?author=ezhivitsa "Documentation") [🤔](#ideas-ezhivitsa "Ideas, Planning, & Feedback") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
