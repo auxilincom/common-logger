@@ -1,3 +1,7 @@
+## v0.1.3 (2018-10-13)
+
+* Fix error when initialize transports
+
 ## v0.1.2 (2018-10-13)
 
 * Fix script error

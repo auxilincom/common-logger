@@ -5,10 +5,10 @@ module.exports.createConsoleLogger = ({ isDev = false }) => {
     level: isDev ? 'debug' : 'info',
     format: isDev ? winston.format.colorize() : winston.format.json(),
     transports: [
-      new transports.Console(),
+      new winston.transports.Console(),
     ],
     exceptionHandlers: [
-      new transports.Console(),
+      new winston.transports.Console(),
     ]
   });
 
