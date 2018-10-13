@@ -1,3 +1,7 @@
+## v0.1.2 (2018-10-13)
+
+* Fix script error
+
 ## v0.1.1 (2018-10-10)
 
 * Update package.json

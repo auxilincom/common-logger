@@ -16,7 +16,3 @@ module.exports.createConsoleLogger = ({ isDev = false }) => {
 
   return logger;
 };
-
-module.exports.createExceptionHandler => {
-  return 
-}
