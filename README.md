@@ -24,15 +24,15 @@ Create `logger.js` file in the root of your project:
 ```javascript
 const createConsoleLogger = require('@auxilin/common-logger').createConsoleLogger;
 
-module.exports = createConsoleLogger({ isDev: true, logDir: __dirname, });
+module.exports = createConsoleLogger({ logToFiles: true, logDir: __dirname, });
 ```
 
-By default isDev is set to `false` in logger. If set to true, two things will happen:
+By default `logToFiles` is set to `false` in logger. If set to true, two things will happen:
 
 1. All logs output will be in plain text in the console (vs `json` in the corresponding files for production like environments)
 2. For development environment logger will also output all `logger.debug()` messages, while none dev info and above.
 
-If `isDev` is set to `false` we write logs to the files `info.log`, `errors.log`, `exceptions.log`. You can set location of this files using option `logDir`.
+If `logToFiles` is set to `true` we write logs to the files `info.log`, `errors.log`, `exceptions.log`. You can set location of this files using option `logDir`.
 
 ## Expose logger as global object
 

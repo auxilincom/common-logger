@@ -30,7 +30,7 @@ describe('common logger', () => {
 
   before(async () => {
     logger = createConsoleLogger({
-      isDev: false,
+      logToFiles: true,
       logDir: resolve('./logs'),
     });
   });
