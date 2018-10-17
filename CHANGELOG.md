@@ -1,3 +1,7 @@
+## v0.2.0 (2018-10-14)
+
+* Add log to files
+
 ## v0.1.3 (2018-10-13)
 
 * Fix error when initialize transports
