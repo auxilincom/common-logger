@@ -14,10 +14,20 @@ const defaultLogDir = resolve(appRoot.path, './logs');
 module.exports.createConsoleLogger = ({
   logToFiles = false,
   logDir = defaultLogDir,
+  level = 'info',
+  format: logFormat = format.combine(
+    format.timestamp(),
+    format.json(),
+  ),
 }) => {
   if (logToFiles && !existsSync(logDir)) {
     mkdirSync(logDir);
   }
+
+  const fileOptions = {
+    maxsize: 5242880, // 5MB
+    maxFiles: 5,
+  };
 
   const loggerTransports = !logToFiles
     ? [new transports.Console()]
@@ -25,14 +35,12 @@ module.exports.createConsoleLogger = ({
       new transports.File({
         filename: resolve(logDir, './errors.log'),
         level: 'error',
-        maxsize: 5242880, // 5MB
-        maxFiles: 5,
+        ...fileOptions,
       }),
       new transports.File({
         filename: resolve(logDir, './combined.log'),
         level: 'info',
-        maxsize: 5242880, // 5MB
-        maxFiles: 5,
+        ...fileOptions,
       }),
     ];
 
@@ -41,23 +49,14 @@ module.exports.createConsoleLogger = ({
     : [
       new transports.File({
         filename: resolve(logDir, './exceptions.log'),
-        maxsize: 5242880, // 5MB
-        maxFiles: 5,
+        ...fileOptions,
       }),
     ];
 
   const logger = createLogger({
     exitOnError: false,
-    format: logToFiles
-      ? format.combine(
-        format.timestamp(),
-        format.json(),
-      )
-      : format.combine(
-        format.colorize(),
-        format.splat(),
-        format.simple(),
-      ),
+    level,
+    format: logFormat,
     levels: config.syslog.levels,
     transports: loggerTransports,
     exceptionHandlers: exceptionTransports,
