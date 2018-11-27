@@ -22,17 +22,29 @@ npm i @auxilin/common-logger
 Create `logger.js` file in the root of your project:
 
 ```javascript
+const { format } = require('winston');
 const createConsoleLogger = require('@auxilin/common-logger').createConsoleLogger;
 
-module.exports = createConsoleLogger({ logToFiles: true, logDir: __dirname, });
+module.exports = createConsoleLogger({
+  logToFiles: true,
+  logDir: __dirname,
+  format: format.combine(
+    format.splat(),
+    format.simple(),
+  ),
+});
 ```
 
-By default `logToFiles` is set to `false` in logger. If set to true, two things will happen:
+## Options:
 
-1. All logs output will be in plain text in the console (vs `json` in the corresponding files for production like environments)
-2. For development environment logger will also output all `logger.debug()` messages, while none dev info and above.
+Available variables:
 
-If `logToFiles` is set to `true` we write logs to the files `info.log`, `errors.log`, `exceptions.log`. You can set location of this files using option `logDir`.
+|Name|Default|Description|
+|:--:|:--:|:----------|
+|**`logToFiles`**|`false`|If `false` then log to console, instead write logs to the files `info.log`, `errors.log`, `exceptions.log`.|
+|**`logDir`**|`resolve(appRoot.path, './logs')`|Directory where to save log files.|
+|**`level`**|`info`|Log only if `info.level` less than or equal to this level. Available levels: `error`, `warn`, `info`, `verbose`, `debug`, `silly`|
+|**`format`**|`format.combine(format.timestamp(), format.json())`|Format of logs.|
 
 ## Expose logger as global object
 

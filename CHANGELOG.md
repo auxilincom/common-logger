@@ -1,3 +1,7 @@
+## v0.3.0 (2018-11-26)
+
+* Update logger options
+
 ## v0.2.0 (2018-10-14)
 
 * Add log to files
