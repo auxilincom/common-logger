@@ -1,13 +1,18 @@
 # Common Logger
 
+[![Auxilin.com — Production ready Node, React starter kit for building products at a warp speed](https://raw.githubusercontent.com/auxilincom/component-template/master/assets/cover-black.png)](https://github.com/auxilincom/auxilin)
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
-[![npm version](https://badge.fury.io/js/%40auxilin%2Feslint-config.svg)](https://badge.fury.io/js/%40auxilin%2Fcommon-logger) 
+[![npm version](https://badge.fury.io/js/%40auxilin%2Fcommon-logger.svg)](https://badge.fury.io/js/%40auxilin%2Fcommon-logger) 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/auxilincom/common-logger/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![David Dependancy Status](https://david-dm.org/auxilincom/common-logger.svg)](https://david-dm.org/auxilincom/common-logger)
 
 [![Watch on GitHub](https://img.shields.io/github/watchers/auxilincom/common-logger.svg?style=social&label=Watch)](https://github.com/auxilincom/common-logger/watchers)
 [![Star on GitHub](https://img.shields.io/github/stars/auxilincom/common-logger.svg?style=social&label=Stars)](https://github.com/auxilincom/common-logger/stargazers)
+[![Follow](https://img.shields.io/twitter/follow/auxilin.svg?style=social&label=Follow)](https://twitter.com/auxilin)
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/auxilincom/common-logger.svg?style=social)](https://twitter.com/intent/tweet?text=I%27m%20using%20Auxilin%20components%20to%20build%20my%20next%20product%20🚀.%20Check%20it%20out:%20https://github.com/auxilincom/common-logger)
+[![@auxilin](https://img.shields.io/badge/%F0%9F%92%AC%20Telegram-t.me/auxilin-blue.svg)](https://t.me/auxilin)
 
 Common logger is preconfigured console based logger. Currently based on [winston](https://github.com/winstonjs/winston).
 
