@@ -1,3 +1,8 @@
+## v0.3.1 (2019-02-05)
+
+* Update npm dependencies
+* Update readme
+
 ## v0.3.0 (2018-11-26)
 
 * Update logger options
