@@ -1,3 +1,8 @@
+## v0.3.2 (2019-04-08)
+
+* Add stacktrace when logging error
+* Write error logs to stderr
+
 ## v0.3.1 (2019-02-05)
 
 * Update npm dependencies
