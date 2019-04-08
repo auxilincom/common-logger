@@ -16,6 +16,7 @@ module.exports.createConsoleLogger = ({
   logDir = defaultLogDir,
   level = 'info',
   format: logFormat = format.combine(
+    format.errors({ stack: true }),
     format.timestamp(),
     format.json(),
   ),
@@ -29,8 +30,17 @@ module.exports.createConsoleLogger = ({
     maxFiles: 5,
   };
 
+  const consoleOptions = {
+    stderrLevels: [
+      'emerg',
+      'alert',
+      'crit',
+      'error',
+    ],
+  };
+
   const loggerTransports = !logToFiles
-    ? [new transports.Console()]
+    ? [new transports.Console(consoleOptions)]
     : [
       new transports.File({
         filename: resolve(logDir, './errors.log'),
@@ -45,7 +55,7 @@ module.exports.createConsoleLogger = ({
     ];
 
   const exceptionTransports = !logToFiles
-    ? [new transports.Console()]
+    ? [new transports.Console(consoleOptions)]
     : [
       new transports.File({
         filename: resolve(logDir, './exceptions.log'),
