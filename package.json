@@ -1,6 +1,6 @@
 {
   "name": "@auxilin/common-logger",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Simple, preconfigured logger",
   "author": "Auxilin",
   "private": false,
