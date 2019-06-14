@@ -1,3 +1,7 @@
+## v0.4.0 (2019-06-14)
+
+* Export `format` function
+
 ## v0.3.2 (2019-04-08)
 
 * Add stacktrace when logging error
