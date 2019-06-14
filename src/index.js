@@ -83,3 +83,5 @@ module.exports.createConsoleLogger = ({
 
   return logger;
 };
+
+module.exports.format = format;
