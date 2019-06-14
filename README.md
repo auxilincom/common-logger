@@ -27,8 +27,10 @@ npm i @auxilin/common-logger
 Create `logger.js` file in the root of your project:
 
 ```javascript
-const { format } = require('winston');
-const createConsoleLogger = require('@auxilin/common-logger').createConsoleLogger;
+const {
+  format,
+  createConsoleLogger,
+} = require('@auxilin/common-logger');
 
 module.exports = createConsoleLogger({
   logToFiles: true,
