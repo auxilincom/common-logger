@@ -1,6 +1,6 @@
 {
   "name": "@auxilin/common-logger",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Simple, preconfigured logger",
   "author": "Auxilin",
   "private": false,
@@ -23,16 +23,17 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
-    "@auxilin/eslint-config": "0.1.1",
-    "all-contributors-cli": "6.7.0",
-    "babel-eslint": "10.0.1",
+    "@auxilin/eslint-config": "0.2.0",
+    "all-contributors-cli": "6.8.1",
+    "babel-eslint": "10.0.2",
     "chai": "4.2.0",
-    "del": "4.1.1",
-    "eslint": "5.16.0",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-react": "7.13.0",
-    "mocha": "6.1.4",
+    "del": "5.0.0",
+    "eslint": "6.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "mocha": "6.2.0",
     "npm-run-all": "4.1.5"
   },
   "repository": {
@@ -40,6 +41,6 @@
     "url": "git+https://github.com/auxilincom/common-logger.git"
   },
   "engines": {
-    "node": ">= 6.4.0"
+    "node": ">= 8"
   }
 }
