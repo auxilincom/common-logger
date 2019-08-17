@@ -1,3 +1,8 @@
+## v0.5.0 (2019-08-17)
+
+* Update `eslint`
+* Update drone config
+
 ## v0.4.0 (2019-06-14)
 
 * Export `format` function
