@@ -1,3 +1,7 @@
+## v0.5.1 (2019-09-04)
+
+* Update dev dependencies
+
 ## v0.5.0 (2019-08-17)
 
 * Update `eslint`

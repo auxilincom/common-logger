@@ -1,6 +1,6 @@
 {
   "name": "@auxilin/common-logger",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Simple, preconfigured logger",
   "author": "Auxilin",
   "private": false,
@@ -24,11 +24,11 @@
   },
   "devDependencies": {
     "@auxilin/eslint-config": "0.2.0",
-    "all-contributors-cli": "6.8.1",
-    "babel-eslint": "10.0.2",
+    "all-contributors-cli": "6.9.0",
+    "babel-eslint": "10.0.3",
     "chai": "4.2.0",
-    "del": "5.0.0",
-    "eslint": "6.1.0",
+    "del": "5.1.0",
+    "eslint": "6.3.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
